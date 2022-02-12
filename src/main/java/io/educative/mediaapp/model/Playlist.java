@@ -19,11 +19,12 @@ public class Playlist {
     private String name;
 
     @Column(name = "created_on")
-    @JsonProperty("created_on")
+    @JsonProperty("created_on") // Property name refers to name used externally, as the field name in JSON objects.
     private Date createdOn;
 
-    //@ElementCollection(targetClass = java.util.ArrayList.class)
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name="playlist_id")
+    //@ElementCollection(targetClass = java.util.HashSet.class) // specifies a collection of instances of a basic type or embeddable/nested class
+    @OneToMany(cascade = CascadeType.ALL) // specifies a many-valued association with one-to-many multiplicity
+    @JoinColumn(name="playlist_id") // specifies a column for joining an entity association or element collection
+
     private Set<Song> songs  = new HashSet<>();
 }

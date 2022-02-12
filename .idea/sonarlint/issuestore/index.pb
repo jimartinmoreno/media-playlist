@@ -19,16 +19,12 @@ i
 9src/main/java/io/educative/mediaapp/model/ErrorCodes.java,4\e\4e343d13db07180c1f913e1e88cc5707d711515f
 v
 Fsrc/main/java/io/educative/mediaapp/exception/ExceptionController.java,2\9\2967dca8d24d8e18a6829a01c11b28744b7800b5
-g
-7src/main/java/io/educative/mediaapp/model/Playlist.java,b\7\b7841164067f83fe2034e9c2dcfe406aa2aa06f6
 v
 Fsrc/main/java/io/educative/mediaapp/repository/PlaylistRepository.java,5\0\507d1f36894104ed5a710d379075335cd65141f7
 
 Osrc/main/java/io/educative/mediaapp/controller/data/PlaylistRestController.java,4\1\411ea7749f6b9cac0e348729036ce543e0f1c328
 y
 Isrc/main/java/io/educative/mediaapp/service/impl/PlaylistServiceImpl.java,3\d\3d593cca07ddba61e6ddd96cb85070db03e183df
-c
-3src/main/java/io/educative/mediaapp/model/Song.java,a\7\a7a270a6c7408138070e3f8895c89c318ba0b90b
 s
 Csrc/main/java/io/educative/mediaapp/repository/SongsRepository.java,0\3\03e456cd46a61aae59011073329a6f3540db27ea
 t
