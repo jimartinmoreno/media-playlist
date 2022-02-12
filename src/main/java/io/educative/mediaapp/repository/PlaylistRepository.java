@@ -11,5 +11,5 @@ import java.util.Collection;
 public interface PlaylistRepository extends JpaRepository<Playlist, BigInteger> {
 
     @Query("select s from Song s where s.playlistId = ?1")
-    public Collection<Song> getSongs(BigInteger playlistId);
+    Collection<Song> getSongs(BigInteger playlistId);
 }

@@ -13,10 +13,10 @@ public interface SongsRepository extends JpaRepository<Song, BigInteger> {
     @Transactional
     @Modifying(clearAutomatically = true)
     @Query("delete from Song s where s.playlistId = ?1 and s.id = ?2")
-    public void delete(BigInteger playlistId, BigInteger songId);
+    void delete(BigInteger playlistId, BigInteger songId);
 
     @Transactional
     @Modifying(clearAutomatically = true)
     @Query("update Song s set s.playlistId = ?2 where s.id = ?1")
-    public int updatePlaylist(BigInteger id, BigInteger id1);
+    int updatePlaylist(BigInteger id, BigInteger id1);
 }

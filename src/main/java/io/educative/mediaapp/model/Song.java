@@ -11,9 +11,11 @@ import java.util.Date;
 @Data
 @Entity
 @Table(name = "song")
-@NamedNativeQuery(name = "songsByPlaylistId",
-        query = "select id, name, playlist_id, cover_url, created_on from song s " +
-                "where s.playlist_id = ?", resultClass = Song.class)
+@NamedNativeQuery(
+        name = "songsByPlaylistId",
+        query = "select id, name, playlist_id, cover_url, created_on from song s where s.playlist_id = ?",
+        resultClass = Song.class
+)
 public class Song {
 
     @GeneratedValue(strategy = GenerationType.AUTO)

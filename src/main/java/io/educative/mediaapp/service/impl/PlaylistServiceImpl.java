@@ -50,7 +50,7 @@ public class PlaylistServiceImpl implements PlaylistService {
 
     @Override
     public Iterable<Song> getSongs(BigInteger playlistId) {
-        if(playlistId==null){
+        if (playlistId == null) {
             return songRepo.findAll();
         }
         Playlist playlist = getPlaylist(playlistId);
@@ -78,9 +78,8 @@ public class PlaylistServiceImpl implements PlaylistService {
         return 1 == songRepo.updatePlaylist(song.getId(), playlist.getId());
     }
 
-    private Playlist getPlaylist(final BigInteger playlistId){
-        return playlistRepo.findById(playlistId)
-                .orElseThrow(()-> new PlaylistNotFoundException(playlistId));
+    private Playlist getPlaylist(final BigInteger playlistId) {
+        return playlistRepo.findById(playlistId).orElseThrow(() -> new PlaylistNotFoundException(playlistId));
     }
 
     private Song getSong(final BigInteger songId) {
